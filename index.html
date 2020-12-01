@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaflet maps</title>
+  </head>
+  <!-- Leaflet css-->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css" />
+  <body onload="incrementCount(10)">
+    <h1>Real Time Traffic Map</h1>
+    <table style="width: 600px">
+      <tr>
+        <td class="text_tiles">To increase Vehicle Count</td>
+        <td class="text_tiles">To decrease Vehicle count</td>
+      </tr>
+      <tr>
+        <td>
+          <p align="center"><button onclick="increase()">Click Me</button></p>
+        </td>
+        <td>
+          <p align="center"><button onclick="decrease()">Click Me</button></p>
+        </td>
+      </tr>
+    </table>
+    <table style="width: 800px">
+      <tr>
+        <td>
+          <h2>Counting System</h2>
+        </td>
+        <td>
+          <h2>Real time Counter</h2>
+        </td>
+      </tr>
+      <tr>
+        <td>Total vehicle count <br /></td>
+        <td>
+          <table style="width: 300px">
+            <tr>
+              <td>Vehicle Towards</td>
+              <td>Vehicle Away</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="main_container" id="id_main_container">
+            <div class="container_inner" id="display_div_id"></div>
+          </div>
+        </td>
+        <td>
+          <table style="width: 300px">
+            <tr>
+              <td>
+                <div id="clickup"></div>
+              </td>
+              <td>
+                <div id="clickdn"></div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <div id="map" style="width: 100%; height: 400px"></div>
+  </body>
+</html>
+<!--leaflet js-->
+<script src="./terrain map/lib/proj4js-compressed.js"></script>
+<script src="./node_modules/leaflet/dist/leaflet.js"></script>
+<script src="./terrain map/lib/proj4leaflet.js"></script>
+<script src="./point.js"></script>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./map.js"></script>
+<script src="./counter.js"></script>
+<script src="./onclick.js"></script>
